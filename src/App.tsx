@@ -540,61 +540,6 @@ const HighlightsSection = () => {
   );
 };
 
-// Photo Gallery Section
-const GallerySection = () => {
-  const images = [
-    { src: 'https://images.pexels.com/photos/32626661/pexels-photo-32626661.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Modern Study Room', tall: true },
-    { src: 'https://images.pexels.com/photos/3769552/pexels-photo-3769552.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Students Studying', wide: false },
-    { src: 'https://images.pexels.com/photos/1117210/books-knowledge-school-reading-1117210.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Premium Library', tall: false },
-    { src: 'https://images.pexels.com/photos/5732978/pexels-photo-5732978.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Reading Corner', tall: true },
-    { src: 'https://images.pexels.com/photos/159711/books.jpg?auto=compress&cs=tinysrgb&w=800', alt: 'Book Collection', wide: false },
-    { src: 'https://images.pexels.com/photos/25646880/pexels-photo-25646880.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Study Desk', tall: false },
-    { src: 'https://images.pexels.com/photos/6077708/pexels-photo-6077708.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Library Interior', wide: false },
-    { src: 'https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Study Hall', tall: true },
-    { src: 'https://images.pexels.com/photos/4862989/pexels-photo-4862989.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Premium Workspace', tall: false },
-  ];
-
-  return (
-    <section id="gallery" className="py-20 md:py-32 bg-white relative">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="inline-block bg-royal-gold/10 text-royal-gold px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Photo Gallery
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-blue mb-4">
-            Discover Our <span className="text-gradient-gold">Space</span>
-          </h2>
-          <div className="decorative-line mx-auto" />
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Take a virtual tour of our premium study environment designed for focused learning.
-          </p>
-        </div>
-
-        <div className="masonry-grid">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`img-zoom rounded-xl overflow-hidden shadow-lg cursor-pointer ${
-                image.tall ? 'masonry-item-tall' : ''
-              } ${image.wide ? 'masonry-item-wide' : ''}`}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-blue/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-white font-medium">{image.alt}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // Online Admission Section
 const AdmissionSection = () => {
   return (
@@ -987,7 +932,6 @@ function App() {
         <WhyChooseSection />
         <FeeStructureSection />
         <HighlightsSection />
-        <GallerySection />
         <AdmissionSection />
         <LocationSection />
         <ContactSection />
